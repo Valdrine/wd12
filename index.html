@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12번째 웹디자인</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <script src="./script/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">
+            <div class="logo">
+                <img src="./images/logo.png" alt="로고">
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="#">축제소개</a>
+                    <ul>
+                        <li>
+                            <a href="#">Festival 소개</a>
+                            <a href="#">행사장 안내</a>
+                            <a href="#">조작위원회</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">예약안내</a>
+                    <ul>
+                        <li>
+                            <a href="#">예약하기</a>
+                            <a href="#">예약확인/취소</a>
+                            <a href="#">단체예약문의</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">아티스트</a>
+                    <ul>
+                        <li>
+                            <a href="#">고릴라즈</a>
+                            <a href="#">너바나</a>
+                            <a href="#">버즈</a>
+                            <a href="#">타일로드</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul>
+                        <li>
+                            <a href="#">공지사항</a>
+                            <a href="#">사진갤러리</a>
+                            <a href="#">영상갤러리</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right">
+
+            <div class="slider">
+                <div class="slide">
+                    <a href="#"><img src="./images/slide1.jpg" alt="슬라이드1"></a>
+                    <a href="#"><img src="./images/slide2.jpg" alt="슬라이드2"></a>
+                    <a href="#"><img src="./images/slide3.jpg" alt="슬라이드3"></a>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="notice">
+                    <div class="n_title">
+                        <h2>공지사항</h2>
+                    </div>
+                    <ul>
+                        <li><a href="#">솰라솰라</a></li>
+                        <li><a href="#">솰라솰라</a></li>
+                        <li><a href="#">솰라솰라</a></li>
+                        <li><a href="#">솰라솰라</a></li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <div class="g_title">
+                        <h2>갤러리</h2>
+                    </div>
+                    <ul>
+                        <li><a href="#"><img src="./images/gallery1.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/gallery2.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/gallery3.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+
+                <ul class="link">
+                    <li><a href="#">링크</a></li>
+                    <li><a href="#">링크</a></li>
+                    <li><a href="#">링크</a></li>
+                    <li><a href="#">링크</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="footer">
+                <div class="f_logo">
+                    <img src="./images/logo-footer.png" alt="">
+                </div>
+                <p>Copyright</p>
+                <div class="site">
+                    <select name="" id="">
+                        <option value="네이버">네이버</option>
+                        <option value="다음">다음</option>
+                        <option value="구글">구글</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        //메뉴
+
+        $('.gnb > li').hover(function(){
+            $(this).find('ul').stop().fadeIn('fast')},
+            function(){
+                $(this).find('ul').stop().hide()
+            })
+        
+
+        //슬라이더
+
+        var index = 0
+        $('.slide a').eq(index).show()
+
+        setInterval(function(){
+            var nexIndex = (index+1) % 3
+            $('.slide a').eq(index).fadeOut()
+            $('.slide a').eq(nexIndex).fadeIn()
+            index = nexIndex
+        }, 1000)
+        
+            
+        
+
+
+    </script>
+    
+</body>
+</html>

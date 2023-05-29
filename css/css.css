@@ -1,0 +1,218 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #222;
+   
+}
+
+.wrap {
+    width: 1000px;
+    display: flex;
+}
+
+
+/* left */
+
+.left {
+    width: 200px;
+    padding: 0 10px;
+    position: relative;
+}
+
+.logo {
+   width: 200px;
+}
+
+.logo img {
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+/* gnb */
+
+.gnb {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.gnb > li {
+    position: relative;
+}
+
+.gnb > li > a {
+    display: block;
+    border: 1px solid #222;
+    padding: 15px 0;
+    font-size: 16px;
+}
+
+.gnb > li:hover > a {
+    background-color: #222;
+    color: #fff;
+}
+
+
+.gnb ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: -30px;
+    height: 200px;
+    z-index: 1;
+    text-align: center;
+}
+
+.gnb ul li a {
+    display: block;
+    padding: 10px 0;
+    background-color: #222;
+    color: white;
+}
+.gnb ul li a:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+
+/* right */
+
+.right {
+    width: 800px;
+    
+}
+
+
+/* slider */
+
+.slider {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    
+}
+
+.slide {
+    
+}
+
+.slide img{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide a {
+    display: none;
+}
+
+/* contents */
+
+.contents {
+    height: 200px;
+    display: flex;
+    gap: 5px;
+    padding: 10px 0;
+    
+}
+
+.notice {
+    flex: 1;
+    width: 260px;
+    display: block;
+}
+
+.n_title {
+    height: 40px;
+    width: 50%;
+    text-align: center;
+    line-height: 40px;
+    padding-left: 5px;
+    background-color: #222;
+    color: #fff;
+    display: block;
+}
+
+
+
+.notice > ul {
+    display: block;
+    height: 150px;
+    background-color: red;
+    margin: 0;
+}
+
+.notice > ul > li > a {
+    display: block;
+    padding: 8px;
+    background-color: #ddd;
+}
+
+.gallery {
+    flex: 1;
+    width: 260px;
+    margin: 0;
+}
+
+.g_title {
+    height: 40px;
+}
+
+.gallery ul {
+    display: flex;
+    width: 260px;
+    height: 150px;
+    gap: 0 10px;
+    
+}
+
+.gallery img {
+    width: 100%;
+    height: 130px;
+    padding: 15px 0;
+    object-fit: cover;
+    /* display: none; */
+}
+
+.link {
+    flex: 1;
+    width: 260px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.link li {
+    display: block;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 15px;
+}
+
+.footer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site {
+    padding: 0 20px;
+}
